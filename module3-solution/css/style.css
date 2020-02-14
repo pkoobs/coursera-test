@@ -1,0 +1,44 @@
+/********** Base styles **********/
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-collapse li {
+  border-bottom: 1px solid #040404;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.navbar-collapse li:first-child {
+  padding-bottom: 4px;
+  padding-top: 0px;
+}
+
+.navbar-collapse li:last-child {
+  border-bottom: 0px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+}
+
+#grid {
+  height: 1300px;
+}
+
+div.innerContainer {
+  background-color: gray;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+h3 {
+  color: black;
+}
+
+div.paragraph {
+  color: black;
+  margin: 0px 5px 0px 5px;
+}
+
+a {
+  color: Indigo;
+}
