@@ -1,0 +1,20 @@
+.message {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#lunch-menu.good {
+	border-color: green;
+}
+
+#lunch-menu.bad {
+	border-color: red;
+}
+
+#output.good {
+	color: green;
+}
+
+#output.bad {
+	color: red;
+}
