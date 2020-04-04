@@ -1,0 +1,16 @@
+<table style="width:100%">
+  <tr ng-show="foundController.items.length">
+    <th>Name</th>
+    <th>Short Name</th>
+    <th>Description</th>
+  </tr>
+  <tr ng-repeat="item in foundController.items">
+    <td>{{ item.name }}</td>
+    <td>{{ item.short_name }}</td>
+    <td>{{ item.description }}</td>
+    <td><button ng-click="foundController.onRemove({index: $index});">Don't want this one!</button></td>
+  </tr>
+</table>
+<div ng-hide="foundController.items.length">
+	Nothing found
+</div>
