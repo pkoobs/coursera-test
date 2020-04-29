@@ -1,6 +1,5 @@
-<h2>Displaying categories component</h2>
 <ul>
   <li ng-repeat="item in $ctrl.items">
-    {{ $index }}. {{ item.name }}
+    <span ui-sref="categories.items({category: item.short_name})">{{ item.name }}</span>
   </li>
 </ul>

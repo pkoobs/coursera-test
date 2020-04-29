@@ -10,7 +10,6 @@
     var service = this;
 
     service.getAllCategories = function () {
-      console.log("Getting data... (in MenuDataService.js)");
       return $http({
         url: (ApiBasePath + "/categories.json")
       })

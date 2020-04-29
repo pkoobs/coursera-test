@@ -14,3 +14,13 @@ div.tabs {
 .activeTab {
   font-weight: bold;
 }
+
+span[ui-sref] {
+  cursor:pointer;
+  color:blue;
+  text-decoration:underline;
+}
+span[ui-sref]:hover {
+  text-decoration:none;
+  text-shadow: 1px 1px 1px #555;
+}

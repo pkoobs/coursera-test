@@ -13,24 +13,35 @@
     // *** Set up UI states ***
     $stateProvider
 
-    // Home page
+    // Home view
     .state('home', {
       url: '/',
       templateUrl: 'src/home.template.html'
     })
 
-    // Categories page
+    // Categories view
     .state('categories', {
       url: '/categories',
       templateUrl: 'src/categories/categories.template.html',
       controller: 'CategoriesComponentController as categoriesCtrl',
       resolve: {
         categories: ['MenuDataService', function(MenuDataService) {
-          console.log("Getting data... (in routes.js)");
           return MenuDataService.getAllCategories().then(function(response) {
-            console.log("Returning data... (in routes.js)");
-            console.log("Data = \n" + response.data[1].name + "\n(in routes.js)");
             return response.data;
+          });
+        }]
+      }
+    })
+
+    // Items view
+    .state('categories.items', {
+      url: '/{category}/items',
+      templateUrl: 'src/items/items.template.html',
+      controller: 'ItemsComponentController as itemsCtrl',
+      resolve: {
+        items: ['MenuDataService', '$stateParams', function(MenuDataService, $stateParams) {
+          return MenuDataService.getItemsForCategory($stateParams.category).then(function(response) {
+            return response.data.menu_items;
           });
         }]
       }
