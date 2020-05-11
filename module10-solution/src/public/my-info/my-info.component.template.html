@@ -1,0 +1,13 @@
+<fieldset ng-init="myInfoCtrl.getInfo()">
+  <legend>My Info</legend>
+  <div ng-if="myInfoCtrl.user.validForm">
+  	<div><h3>Name: {{ myInfoCtrl.user.firstName }}</h3></div>
+    <div><h3>Email: {{ myInfoCtrl.user.email }}</h3></div>
+    <div><h3>Phone: {{ myInfoCtrl.user.phone }}</h3></div>
+    <div><h3>Favorite Menu Item: #{{ myInfoCtrl.user.menuNumber }}</h3></div>
+    <img ng-src="{{myInfoCtrl.apiPath}}/images/{{myInfoCtrl.user.menuNumber}}.jpg" alt="{{myInfoCtrl.user.menuNumber}}">
+  </div>
+  <div ng-hide="myInfoCtrl.user.validForm">
+  	Not Signed Up Yet. <a ui-sref="public.sign-up">Sign up now!</a>
+  </div>
+</fieldset>
